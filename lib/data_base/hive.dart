@@ -16,8 +16,7 @@ class HiveDb {
     final postsHive = Hive.box<Posts>('posts');
   }
 
-  void addPosts(Posts post) {
-    final contactBox = Hive.box('posts');
-    contactBox.add(post);
+  void hiveOpenBoxComments() {
+    final postsHive = Hive.box<Comment>('posts');
   }
 }
